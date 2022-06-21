@@ -1,0 +1,21 @@
+CREATE DATABASE usersample character utf8;
+
+create sequence ORDER_ID_SEQ start with 1 increment by 1
+
+CREATE TABLE member (
+    id  BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    name VARCHAR(20) NOT NULL ,
+    nickname VARCHAR(30) NOT NULL ,
+    password VARCHAR(200) NOT NULL ,
+    phone_number VARCHAR(20) NOT NULL,
+    created_date DATETIME NOT NULL DAFAULT CURRENT_TIMESTAMP,
+    gender CHAR(1) NOT NULL
+) ENGINE=INNODB
+  DEFAULT CHARSET SET =utf8;
+
+CREATE TABLE orders (
+    order_id VARCHAR(12) NOT NULL PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL ,
+    pay_date DATETIME NOT NULL DAFAULT CURRENT_TIMESTAMP
+) ENGINE=INNODB
+  DEFAULT CHARSET SET =utf8;

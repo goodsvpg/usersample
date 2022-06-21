@@ -1,0 +1,25 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: usersample
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  datasource:
+    url: jdbc:mysql://localhost:3306/example?serverTimezone=UTC&characterEncoding=UTF-8
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username:
+    password:
+    replications:
+      replication1 :
+        name : replication1
+        url: jdbc:mysql://localhost:3307/example?serverTimezone=UTC&characterEncoding=UTF-8
+        driverClassName: com.mysql.cj.jdbc.Driver
+        username:
+        password:
+      replication2 :
+        name : replication2
+        url: jdbc:mysql://localhost:3308/example?serverTimezone=UTC&characterEncoding=UTF-8
+        driverClassName: com.mysql.cj.jdbc.Driver
+        username:
+        password:
